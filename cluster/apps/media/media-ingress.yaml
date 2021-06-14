@@ -12,7 +12,7 @@ spec:
         paths:
         - pathType: Prefix
           path: /sonarr
-          - backend:
+          backend:
               service: 
                 name: sonarr-svc
                 port:
