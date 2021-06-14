@@ -10,7 +10,7 @@ spec:
   accessModes:
   # ReadWriteMany(RW from multi nodes), ReadWriteOnce(RW from a node), ReadOnlyMany(R from multi nodes)
   - ReadWriteMany
-  StorageClass: nfs-video
+  storageClassName: nfs-video
   resources:
      requests:
        # storage size to use
