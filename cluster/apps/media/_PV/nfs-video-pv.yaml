@@ -13,7 +13,7 @@ spec:
   accessModes:
     # ReadWriteMany(RW from multi nodes), ReadWriteOnce(RW from a node), ReadOnlyMany(R from multi nodes)
     - ReadWriteMany
-    StorageClass: nfs-video
+  StorageClass: nfs-video
   persistentVolumeReclaimPolicy:
     # retain even if pods terminate
     Retain
