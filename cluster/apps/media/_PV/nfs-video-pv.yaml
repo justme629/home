@@ -7,13 +7,13 @@ metadata:
   labels:
     volume: nfs-video-pv-volume
 spec:
+  StorageClass: nfs-video
   capacity:
     # storage size
     storage: 6Ti
   accessModes:
     # ReadWriteMany(RW from multi nodes), ReadWriteOnce(RW from a node), ReadOnlyMany(R from multi nodes)
     - ReadWriteMany
-  StorageClass: nfs-video
   persistentVolumeReclaimPolicy:
     # retain even if pods terminate
     Retain
