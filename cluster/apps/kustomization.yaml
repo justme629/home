@@ -4,5 +4,5 @@ resources:
 - default
 - networking
 - system-upgrade
-#- media
+- media
 - data
