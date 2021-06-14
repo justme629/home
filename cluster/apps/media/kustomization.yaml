@@ -4,3 +4,4 @@ namespace: media
 resources:
 #- _PV
 - sonarr.yaml
+- media-ingress.yaml
