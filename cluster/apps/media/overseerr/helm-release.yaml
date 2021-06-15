@@ -44,10 +44,10 @@ spec:
     persistence:
       config:
         enabled: true
-        type: hostPath 
+ #       type: hostPath 
         mountPath: /app/config
-        hostPath:
-          path: /home/abdullah/ssd/k8s/overseerr
+#        hostPath:
+#          path: /home/abdullah/ssd/k8s/overseerr
     podSecurityContext:
       runAsUser: 1000
       runAsGroup: 1000
