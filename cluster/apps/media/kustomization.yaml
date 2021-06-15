@@ -9,3 +9,4 @@ resources:
 - nzbget
 - hydra
 #- transmission
+- overseerr
