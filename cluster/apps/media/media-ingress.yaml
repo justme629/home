@@ -7,13 +7,33 @@ metadata:
 #  namespace: media
 spec:
   rules:
-    - host: media.home.cloud
+    - host: sonarr.home.cloud
       http:
         paths:
         - pathType: Prefix
           path: /
           backend:
               service: 
-                name: sonarr-svc
+                name: sonarr
+                port:
+                  number: 80
+    - host: radarr.home.cloud
+      http:
+        paths:
+        - pathType: Prefix
+          path: /
+          backend:
+              service:
+                name: radarr
+                port:
+                  number: 80
+    - host: nzbget.home.cloud
+      http:
+        paths:
+        - pathType: Prefix
+          path: /
+          backend:
+              service:
+                name: nzbget
                 port:
                   number: 80
