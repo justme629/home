@@ -30,7 +30,7 @@
              value: 'Asia/Riyadh'
            volumeMounts:
              - mountPath: /config
-               name: nzbget-config-pvc
+               name: nzbget-config
 #               subPath: "nzbget"
              - mountPath: /downloads
                name: nzbget-downloads
