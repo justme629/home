@@ -5,3 +5,5 @@ resources:
 #- _PV
 - sonarr.yaml
 - media-ingress.yaml
+- radarr.yaml
+- nzbget.yaml
