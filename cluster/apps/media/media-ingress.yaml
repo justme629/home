@@ -4,10 +4,10 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
   name: media-ingress
-  namespace: media
+#  namespace: media
 spec:
   rules:
-    - host: media.local
+    - host: media.home.cloud
       http:
         paths:
         - pathType: Prefix
