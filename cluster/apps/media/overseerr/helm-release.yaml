@@ -44,6 +44,7 @@ spec:
     persistence:
       config:
         enabled: true
+        type: hostPath 
         mountPath: /app/config
         hostPath:
           path: /home/abdullah/ssd/k8s/overseerr
