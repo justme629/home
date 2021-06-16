@@ -11,7 +11,7 @@ spec:
     spec:
       # renovate: registryUrl=https://k8s-at-home.com/charts/
       chart: plex
-      version: 5.1.1
+      version: 4.4.0
       sourceRef:
         kind: HelmRepository
         name: k8s-at-home-charts
@@ -29,7 +29,7 @@ spec:
       - 44
       - 109
       - 100
-      - 1000
+#      - 1000
     service:
       main:
         type: LoadBalancer
