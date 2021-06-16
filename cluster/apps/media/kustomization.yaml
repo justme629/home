@@ -10,3 +10,4 @@ resources:
 - hydra
 #- transmission
 - overseerr
+- plex
