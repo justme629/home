@@ -58,6 +58,7 @@ spec:
 #        existingClaim: plex-config-pvc
         existingClaim: media-ssd
         subPath: plex
+        accessMode: ReadWriteMany
       transcode:
         enabled: true
         type: emptyDir
@@ -66,8 +67,7 @@ spec:
         enabled: true
         type: emptyDir
         medium: Memory
-        accessModes:
-        - ReadWriteOnce
+        accessMode: ReadWriteOnce
     additionalVolumeMounts:
     - name: media-nas
       mountPath: "/data"
