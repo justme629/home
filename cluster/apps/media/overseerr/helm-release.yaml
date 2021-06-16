@@ -46,6 +46,8 @@ spec:
         enabled: true
  #       type: hostPath 
         mountPath: /app/config
+        subPath: overseerr
+        existingClaim: media-ssd
 #        hostPath:
 #          path: /home/abdullah/ssd/k8s/overseerr
     podSecurityContext:
