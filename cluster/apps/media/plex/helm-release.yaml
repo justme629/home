@@ -59,6 +59,10 @@ spec:
         existingClaim: media-ssd
         subPath: plex
         accessMode: ReadWriteMany
+    podSecurityContext:
+      runAsUser: 1000
+      runAsGroup: 1000
+      fsGroup: 1000
 #      transcode:
 #        enabled: true
 #        type: emptyDir
