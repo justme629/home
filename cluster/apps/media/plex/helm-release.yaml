@@ -74,13 +74,13 @@ spec:
 #        type: emptyDir
 #        medium: Memory
 #        accessMode: ReadWriteOnce
-#    additionalVolumeMounts:
-#    - name: media-nas
-#      mountPath: "/data"
-#    additionalVolumes:
-#    - name: media-nas
-#      persistentVolumeClaim:
-#        claimName: nfs-video-pvc
+    additionalVolumeMounts:
+    - name: media-nas
+      mountPath: "/data"
+    additionalVolumes:
+    - name: media-nas
+      persistentVolumeClaim:
+        claimName: nfs-video-pvc
     resources:
       requests:
 #        gpu.intel.com/i915: 1
