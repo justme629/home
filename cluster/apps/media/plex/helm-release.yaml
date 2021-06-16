@@ -79,8 +79,10 @@ spec:
       mountPath: "/data"
     additionalVolumes:
     - name: media-nas
-      persistentVolumeClaim:
-        claimName: nfs-video-pvc
+#      persistentVolumeClaim:
+      hostPath:
+        path: /tank/video
+#        claimName: nfs-video-pvc
     resources:
       requests:
 #        gpu.intel.com/i915: 1
