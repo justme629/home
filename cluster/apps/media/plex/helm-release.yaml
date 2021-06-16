@@ -24,6 +24,7 @@ spec:
       tag: v1.23.2.4656-85f0adf5b
     env:
       TZ: "Asia/Riyadh"
+      PLEX_CLAIM: ${PLEX_CLAIM}
     podSecurityContext:
       supplementalGroups:
       - 44
