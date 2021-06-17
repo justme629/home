@@ -38,6 +38,8 @@
              - mountPath: /downloads
                name: sonarr-download
 #               subPath: "downloads/nzbget"
+             - mountPath: /anime
+               name: sonarr-anime
 
       volumes:
         - name: sonarr-config
@@ -59,6 +61,9 @@
         - name: sonarr-download
           hostPath:
             path: /tank/downloads/nzbget
+        - name: sonarr-anime
+          hostPath:
+            path: /tank/video/anime
 #          nfs:
 #            server: share
 #            path: /mnt/pve/media
