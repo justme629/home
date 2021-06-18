@@ -75,10 +75,8 @@ spec:
       mountPath: "/anime"
     additionalVolumes:
     - name: sonarr-tv
-        type: hostPath
         hostPath: /tank/video/tv
     - name: sonarr-anime
-        type: hostPath
         hostPath: /tank/video/anime
     resources:
       requests:
