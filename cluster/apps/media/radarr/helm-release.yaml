@@ -22,6 +22,10 @@ spec:
       tag: v3.2.2.5080
     env:
       TZ: "Asia/Riyadh"
+    podSecurityContext:
+      runAsUser: 1000
+      runAsGroup: 1000
+      fsGroup: 1000
     ingress:
       main:
         enabled: true
@@ -45,14 +49,14 @@ spec:
         tls:
         - hosts:
           - "radarr.${SECRET_DOMAIN}"
-    podSecurityContext:
+#    podSecurityContext:
 #      runAsUser: 1000
 #      runAsGroup: 1000
 #      fsGroup: 1000
 #      fsGroupChangePolicy: OnRootMismatch
-      supplementalGroups:
-      - 100
-      - 1000
+#      supplementalGroups:
+#      - 100
+#      - 1000
     persistence:
       config:
         enabled: true
