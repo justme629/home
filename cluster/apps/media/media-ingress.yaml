@@ -37,13 +37,13 @@ spec:
                 name: nzbget
                 port:
                   number: 80
-    - host: hydra.home.cloud
+    - host: nzbhydra.home.cloud
       http:
         paths:
         - pathType: Prefix
           path: /
           backend:
               service:
-                name: hydra
+                name: nzbhydra2
                 port:
-                  number: 80
+                  number: 5076
