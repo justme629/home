@@ -54,6 +54,11 @@ spec:
         enabled: true
         type: hostPath
         hostPath: /home/abdullah/ssd/k8s/sonarr
+      media:
+        enabled: true
+        readOnly: false
+        type: hostPath
+        hostPath: /tank/video/
 #      sonarr-tv:
 #        enabled: true
 #        type: hostPath
@@ -68,16 +73,6 @@ spec:
       runAsUser: 1000
       runAsGroup: 1000
       fsGroup: 1000
-    additionalVolumeMounts:
-    - name: sonarr-tv
-      mountPath: "/tv"
-    - name: sonarr-anime
-      mountPath: "/anime"
-    additionalVolumes:
-    - name: sonarr-tv
-        hostPath: /tank/video/tv
-    - name: sonarr-anime
-        hostPath: /tank/video/anime
     resources:
       requests:
         memory: 500Mi
