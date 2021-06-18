@@ -53,6 +53,11 @@ spec:
 #      supplementalGroups:
 #      - 100
 #      - 1000
+
+    podSecurityContext:
+      runAsUser: 1000
+      runAsGroup: 1000
+      fsGroup: 1000
     persistence:
       config:
         enabled: true

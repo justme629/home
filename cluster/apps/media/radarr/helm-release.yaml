@@ -22,10 +22,8 @@ spec:
       tag: v3.2.2.5080
     env:
       TZ: "Asia/Riyadh"
-    podSecurityContext:
-      runAsUser: 1000
-      runAsGroup: 1000
-      fsGroup: 1000
+      PUID: 1000
+      PGID: 1000
     ingress:
       main:
         enabled: true
