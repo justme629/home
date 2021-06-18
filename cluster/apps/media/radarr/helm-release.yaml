@@ -73,6 +73,7 @@ spec:
         readOnly: false
         type: hostPath
         hostPath: /tank/downloads/nzbget
+        mountPath: /downloads
         accessMode: ReadWriteMany
     resources:
       requests:
