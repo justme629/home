@@ -60,11 +60,14 @@ spec:
         enabled: true
         type: hostPath
         hostPath: /home/abdullah/ssd/k8s/radarr
+        mountPath: /config
+        accessMode: ReadWriteMany
       media-movie:
         enabled: true
         type: hostPath
         hostPath: /tank/video/movies
         mountPath: /movies
+        accessMode: ReadWriteMany
     resources:
       requests:
         memory: 250Mi
