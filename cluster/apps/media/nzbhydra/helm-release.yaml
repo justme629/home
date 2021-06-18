@@ -59,7 +59,6 @@ spec:
         hostPath: /tank/downloads/nzbhydra
         mountPath: /data/downloads
         accessMode: ReadWriteMany
-
     resources:
       requests:
         memory: 250Mi
