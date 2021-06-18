@@ -2,15 +2,15 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: sonarr
+  name: radarr
   namespace: media
 spec:
   interval: 5m
   chart:
     spec:
       # renovate: registryUrl=https://k8s-at-home.com/charts/
-      chart: sonarr
-      version: 12.2.0
+      chart: radarr
+      version: 12.1.1
       sourceRef:
         kind: HelmRepository
         name: k8s-at-home-charts
@@ -18,8 +18,8 @@ spec:
       interval: 5m
   values:
     image:
-      repository: ghcr.io/k8s-at-home/sonarr
-      tag: v3.0.6.1196
+      repository: ghcr.io/k8s-at-home/radarr
+      tag: v3.2.2.5080
     env:
       TZ: "Asia/Riyadh"
     ingress:
@@ -27,24 +27,24 @@ spec:
         enabled: true
         ingressClassName: "nginx"
         hosts:
-        - host: "sonarr.${SECRET_DOMAIN}"
+        - host: "radarr.${SECRET_DOMAIN}"
           paths:
           - path: /
             pathType: Prefix
         tls:
         - hosts:
-          - "sonarr.${SECRET_DOMAIN}"
+          - "radarr.${SECRET_DOMAIN}"
       api:
         enabled: true
         ingressClassName: "nginx"
         hosts:
-        - host: "sonarr.${SECRET_DOMAIN}"
+        - host: "radarr.${SECRET_DOMAIN}"
           paths:
           - path: /api
             pathType: Prefix
         tls:
         - hosts:
-          - "sonarr.${SECRET_DOMAIN}"
+          - "radarr.${SECRET_DOMAIN}"
     podSecurityContext:
       runAsUser: 1000
       runAsGroup: 1000
@@ -57,20 +57,15 @@ spec:
       config:
         enabled: true
         type: hostPath
-        hostPath: /home/abdullah/ssd/k8s/sonarr
-      sonarr-tv:
+        hostPath: /home/abdullah/ssd/k8s/radarr
+      media-movie:
         enabled: true
         type: hostPath
-        hostPath: /tank/video/tv
-        mountPath: /tv
-      sonarr-anime:
-        enabled: true
-        type: hostPath
-        hostPath: /tank/video/anime
-        mountPath: /anime
+        hostPath: /tank/video/movies
+        mountPath: /movies
     resources:
       requests:
-        memory: 500Mi
-        cpu: 1000m
+        memory: 250Mi
+        cpu: 500m
       limits:
-        memory: 2000Mi
+        memory: 1500Mi

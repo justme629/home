@@ -26,7 +26,7 @@ spec:
               service:
                 name: radarr
                 port:
-                  number: 80
+                  number: 7878
     - host: nzbget.home.cloud
       http:
         paths:
