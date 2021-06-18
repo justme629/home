@@ -45,20 +45,27 @@ spec:
         tls:
         - hosts:
           - "sonarr.${SECRET_DOMAIN}"
-#    podSecurityContext:
-#      supplementalGroups:
-#      - 100
-#      - 1000
+    podSecurityContext:
+      runAsUser: 1000
+      runAsGroup: 1000
+#      fsGroup: 1000
+#      fsGroupChangePolicy: OnRootMismatch
+      supplementalGroups:
+      - 100
     persistence:
       config:
         enabled: true
         type: hostPath
         hostPath: /home/abdullah/ssd/k8s/sonarr
+        mountPath: /config
+        accessMode: ReadWriteOnce
       media:
         enabled: true
         readOnly: false
         type: hostPath
         hostPath: /tank/video/
+#        mountPath: /movies
+        accessMode: ReadWriteMany
 #      sonarr-tv:
 #        enabled: true
 #        type: hostPath
