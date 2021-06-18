@@ -46,18 +46,19 @@ spec:
         - hosts:
           - "sonarr.${SECRET_DOMAIN}"
     podSecurityContext:
-      runAsUser: 1000
-      runAsGroup: 1000
-      fsGroup: 1000
-      fsGroupChangePolicy: OnRootMismatch
-#      supplementalGroups:
-#      - 100
-#      - 1000
+      supplementalGroups:
+      - 100
+      - 1000
     persistence:
       config:
         enabled: true
         type: hostPath
         hostPath: /home/abdullah/ssd/k8s/sonarr
+    podSecurityContext:
+      runAsUser: 1000
+      runAsGroup: 1000
+      fsGroup: 1000
+      fsGroupChangePolicy: OnRootMismatch
       sonarr-tv:
         enabled: true
         type: hostPath
