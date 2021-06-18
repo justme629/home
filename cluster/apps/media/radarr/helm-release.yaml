@@ -61,7 +61,7 @@ spec:
         type: hostPath
         hostPath: /home/abdullah/ssd/k8s/radarr
         mountPath: /config
-        accessMode: ReadWriteMany
+        accessMode: ReadWriteOnce
       media-movie:
         enabled: true
         type: hostPath
