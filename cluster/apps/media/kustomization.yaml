@@ -5,7 +5,7 @@ resources:
 - _pvc
 - sonarr
 - media-ingress.yaml
-#- radarr
+- radarr
 - nzbget
 - hydra
 #- transmission
