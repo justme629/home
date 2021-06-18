@@ -48,17 +48,26 @@ spec:
     persistence:
       config:
         enabled: true
-        type: hostPath
-        hostPath: /home/abdullah/ssd/k8s/nzbhydra
-        mountPath: /config
-        accessMode: ReadWriteOnce
-      nzbhydra-data:
-        enabled: true
-        readOnly: false
-        type: hostPath
-        hostPath: /tank/downloads/nzbhydra
-        mountPath: /data/downloads
+#        hostPath: /home/abdullah/ssd/k8s/nzbhydra
+#        mountPath: /config
+ #       accessMode: ReadWriteOnce
+        existingClaim: media-ssd
+        subPath: nzbhydra
         accessMode: ReadWriteMany
+#      nzbhydra-data:
+#        enabled: true
+#        readOnly: false
+#        type: hostPath
+#        hostPath: /tank/downloads/nzbhydra
+#        mountPath: /data/downloads
+#        accessMode: ReadWriteMany
+    additionalVolumeMounts:
+    - name: nzbhydra-data
+      mountPath: "/data"
+    additionalVolumes:
+    - name: nzbhydra-data
+      hostPath:
+        path: /tank/downloads/nzbhydra
     resources:
       requests:
         memory: 250Mi
