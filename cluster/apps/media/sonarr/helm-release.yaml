@@ -66,6 +66,12 @@ spec:
         hostPath: /tank/video/
 #        mountPath: /movies
         accessMode: ReadWriteMany
+      sonarr-download:
+        enabled: true
+        readOnly: false
+        type: hostPath
+        hostPath: /tank/downloads/nzbget
+        accessMode: ReadWriteMany
 #      sonarr-tv:
 #        enabled: true
 #        type: hostPath
@@ -76,10 +82,6 @@ spec:
 #        type: hostPath
 #        hostPath: /tank/video/anime
 #        mountPath: /anime
-    SecurityContext:
-      runAsUser: 1000
-      runAsGroup: 1000
-      fsGroup: 1000
     resources:
       requests:
         memory: 500Mi

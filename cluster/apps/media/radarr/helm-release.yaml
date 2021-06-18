@@ -68,6 +68,12 @@ spec:
         hostPath: /tank/video/movies
         mountPath: /movies
         accessMode: ReadWriteMany
+      radarr-download:
+        enabled: true
+        readOnly: false
+        type: hostPath
+        hostPath: /tank/downloads/nzbget
+        accessMode: ReadWriteMany
     resources:
       requests:
         memory: 250Mi
