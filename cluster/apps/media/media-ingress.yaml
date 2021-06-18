@@ -16,7 +16,7 @@ spec:
               service: 
                 name: sonarr
                 port:
-                  number: 80
+                  number: 8989
     - host: radarr.home.cloud
       http:
         paths:
