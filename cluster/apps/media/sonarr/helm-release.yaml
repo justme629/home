@@ -69,7 +69,7 @@ spec:
 #        type: hostPath
 #        hostPath: /tank/video/anime
 #        mountPath: /anime
-    podSecurityContext:
+    SecurityContext:
       runAsUser: 1000
       runAsGroup: 1000
       fsGroup: 1000
