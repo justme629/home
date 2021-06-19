@@ -54,7 +54,7 @@ spec:
 #      fsGroupChangePolicy: OnRootMismatch
       supplementalGroups:
       - 100
-#      - 1000
+      - 568
     persistence:
       config:
         enabled: true

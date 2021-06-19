@@ -3,11 +3,11 @@ kind: Kustomization
 namespace: media
 resources:
 - _pvc
-#- sonarr
+- sonarr
 - media-ingress.yaml
-#- radarr
+- radarr
 - nzbget
-#- nzbhydra
+- nzbhydra
 #- transmission
 - overseerr
 - plex
