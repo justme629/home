@@ -572,7 +572,7 @@ data:
 
       # Settings to connect to PostgreSQL server
       postgres:
-        host: postgresql-kube.data.svc.cluster.local.
+        host: postgresql-kube.data.svc.cluster.local
         port: 5432
         database: authelia
         username: authelia

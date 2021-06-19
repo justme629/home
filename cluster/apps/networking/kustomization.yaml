@@ -4,4 +4,4 @@ resources:
 - ingress-nginx
 - wildcard-certificate
 - secret-reflector
-#- authelia
+- authelia
