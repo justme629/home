@@ -38,8 +38,11 @@ spec:
       tls:
       - hosts:
         - "nzbhydra.${SECRET_DOMAIN}"
-#      supplementalGroups:
-#      - 100
+    podSecurityContext:
+      runAsUser: 1000
+      runAsGroup: 1000
+      fsGroup: 1000
+      fsGroupChangePolicy: OnRootMismatch
     persistence:
       config:
         enabled: true
@@ -63,11 +66,6 @@ spec:
 #    - name: nzbhydra-data
 #      hostPath:
 #        path: /tank/downloads/nzbhydra
-    podSecurityContext:
-      runAsUser: 1000
-      runAsGroup: 1000
-      fsGroup: 1000
-      fsGroupChangePolicy: OnRootMismatch
     resources:
       requests:
         memory: 250Mi
