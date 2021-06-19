@@ -37,7 +37,7 @@ spec:
                 name: nzbget
                 port:
                   number: 80
-    - host: nzbhydra2.home.cloud
+    - host: nzbhydra.home.cloud
       http:
         paths:
         - pathType: Prefix
