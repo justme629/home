@@ -6,7 +6,7 @@ resources:
 - sonarr
 - media-ingress.yaml
 - radarr
-#- nzbget
+- nzbget
 - nzbhydra
 #- transmission
 - overseerr
